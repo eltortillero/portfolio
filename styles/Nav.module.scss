@@ -1,0 +1,53 @@
+.navbar > nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+    transition: all ease 300ms;
+}
+
+.navbar_container__right > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar > nav.unscrolled > .navbar_container__right > ul > li > a {
+    color: var(--white);
+    transition: ease 200ms;
+    text-decoration: none;
+}
+.navbar > nav.unscrolled > .navbar_container__right > ul > li > a:hover{
+    color: var(--white-dark);
+}
+.navbar > nav.scrolled > .navbar_container__right > ul > li > a {
+    color: var(--red-light);
+    transition: all ease 200ms;
+    text-decoration: none;
+}
+.navbar > nav.scrolled > .navbar_container__right > ul > li > a:hover {
+    color: var(--red-dark);
+}
+
+.navbar_container__right > ul > li:not(:last-child) {
+    margin-right: .5em;
+}
+.navbar > nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar > nav.scrolled {
+    transition: ease-in 100ms;
+}
+
+
+.navbar > nav.unscrolled {
+    width: 100%;
+    font-size: inherit;
+}

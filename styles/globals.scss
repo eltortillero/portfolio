@@ -1,0 +1,121 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: var(--black-medium);
+  }
+}
+
+:root {
+  --black: #111111;
+  --black-medium: #161616;
+  --black-light: #1c1c1c;
+  --red: #e31c25;
+  --red-light: #fd2c36;
+  --red-dark: #bb000e;
+  --white: #ffffff;
+  --white-dark: #e8e8e8;
+}
+
+.welcome-section {
+  background: linear-gradient(90deg, var(--black-medium) 0%, var(--black-medium) 60%, var(--red-light) 60%);
+  padding-top: 3rem;
+  min-height: 50vh;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .welcome-section {
+    background: linear-gradient(180deg, var(--black-medium) 0%, var(--black-medium) 60%, var(--red-light) 60%);
+  }
+}
+
+.text {
+  &__center {
+    @extend .text;
+    text-align: center;
+  }
+  &__weight-bold {
+    @extend .text;
+    font-weight: 600;
+  }
+  &__weight-light {
+    @extend .text;
+    font-weight: 200;
+  }
+  &__weight-regular {
+    @extend .text;
+    font-weight: 400;
+  }
+}
+
+.display_flex {
+  display: flex;
+}
+
+.flex-direction {
+  &__row {
+    @extend .flex-direction;
+    flex-direction: row;
+  }
+  &__column {
+    @extend .flex-direction;
+    flex-direction: column;
+  }
+}
+
+.justify-content {
+  &__center {
+    @extend .justify-content;
+    justify-content: center;
+  }
+  &__between {
+    @extend .justify-content;
+    justify-content: space-between;
+  }
+  &__even {
+    @extend .justify-content;
+    justify-content: space-evenly;
+  }
+}
+
+.flex-grid-1 {
+  flex: 1;
+}
+
+.grid-spacing__horizontal  {
+  padding-right: 10rem;
+  padding-left: 10rem;
+}
+
+.grid-spacing__vertical {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.overview__card {
+  font-size: .9em;
+}
+
+.debug {
+  border: 1px solid blue;
+}
